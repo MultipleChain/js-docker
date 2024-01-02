@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  node:
+    build:
+      context: .
+    container_name: multiple-chain-js
+    ports:
+      - "4030:4030"
+      - "4031:4031"
+      - "4032:4032"
+      - "4033:4033"
+      - "4034:4034"
+      - "4035:4035"
+    volumes:
+      - ./packages:/usr/src/app/packages

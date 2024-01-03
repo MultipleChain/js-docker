@@ -2,6 +2,8 @@
 
 cd /usr/src/app/packages
 
+npm cache clean --force
+
 cd evm-chains && npm install
 cd ../bitcoin && npm install
 cd ../solana && npm install
@@ -12,7 +14,6 @@ cd ../web3modal && npm install
 
 cd ../..
 
-npm cache clean --force
 npm install
 
 node server.js

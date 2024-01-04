@@ -7,8 +7,6 @@ COPY server.js ./
 # Port
 EXPOSE 4030
 
-COPY entrypoint.sh /usr/local/bin/
-RUN chmod +x /usr/local/bin/entrypoint.sh
+RUN npm install
 
-# http
-ENTRYPOINT ["entrypoint.sh"]
+CMD ["node", "server.js"]
